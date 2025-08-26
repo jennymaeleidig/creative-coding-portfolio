@@ -10,12 +10,10 @@ concurrency: # prevent concurrent deploys doing strange things
   group: deploy-to-neocities
   cancel-in-progress: true
 
-environment:
-  name: main
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: main
 
     steps:
       # The checkout step copies your repo into the action runner. Important!
