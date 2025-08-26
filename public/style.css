@@ -1,3 +1,13 @@
+/* Prevent global styles from affecting mxgraph diagrams */
+.mxgraph,
+.mxgraph * {
+  text-shadow: none !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  max-width: unset !important;
+  color: unset !important;
+  background: unset !important;
+}
 a {
   color: #f2f7fb;
 }
@@ -22,7 +32,30 @@ body {
   background: linear-gradient(to top, #0369db 0%, #068bef 100%);
   min-height: 100vh;
   color: #f2f7fb;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+  position: relative;
+}
+
+.cloud-background {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  pointer-events: none;
+  max-width: 500px;
+  height: auto;
+  border: none !important;
+}
+
+.cloud-background-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  pointer-events: none;
+  max-width: 200px;
+  height: auto;
+  border: none !important;
 }
 
 .weekly-grid {
@@ -33,9 +66,33 @@ body {
   margin-bottom: 1rem;
 }
 
+.cloud-background-center {
+  position: fixed;
+  top: 35%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+  max-width: 250px;
+  height: auto;
+  border: none !important;
+}
+
+.cloud-background-left {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+  max-width: 150px;
+  height: auto;
+  border: none !important;
+}
+
 .weekly-grid a,
 .weekly-grid span {
   padding: 0.5em 1em;
+  border: 2px solid #b6cee6;
   background: #f2f7fb;
   text-align: center;
   font-size: 1rem;
@@ -77,4 +134,11 @@ body {
 
 a:visited {
   color: #b6cee6;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #b6cee6;
+  height: 0;
+  margin: 2em 0;
 }
