@@ -1,3 +1,30 @@
+a {
+  color: #f2f7fb;
+}
+.about-images {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.about-images figure {
+  margin: 0;
+}
+img,
+iframe {
+  border: 2px solid #f2f7fb;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to top, #0369db 0%, #068bef 100%);
+  min-height: 100vh;
+  color: #f2f7fb;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
 .weekly-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -5,40 +32,49 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
 .weekly-grid a,
 .weekly-grid span {
   padding: 0.5em 1em;
-  background: #f5f5f5;
+  background: #f2f7fb;
   text-align: center;
   font-size: 1rem;
   text-decoration: none;
-  color: #222;
+  color: #222 !important;
+  text-shadow: none !important;
 }
+
 .weekly-grid span {
-  .showcase-disabled {
-    text-decoration: line-through;
-    color: gray;
-    pointer-events: none;
-    cursor: not-allowed;
-    background: #eee;
-  }
   text-decoration: line-through;
-  color: gray;
   pointer-events: none;
   cursor: not-allowed;
-  background: #eee;
+  background: #f2f7fb;
 }
+
+/* If .showcase-disabled is a class on span, use this selector: */
+.weekly-grid span.showcase-disabled {
+  text-decoration: line-through;
+  pointer-events: none;
+  cursor: not-allowed;
+  background: #f2f7fb;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 16px;
   margin-top: 1em;
 }
-.gallery-grid img {
-  width: 100%;
-}
+
+.gallery-grid img,
 .gallery-grid iframe {
   width: 100%;
+}
+
+.gallery-grid iframe {
   aspect-ratio: 16/9;
-  border: none;
+}
+
+a:visited {
+  color: #b6cee6;
 }
