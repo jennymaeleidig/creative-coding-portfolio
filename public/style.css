@@ -121,14 +121,16 @@ pre code {
 }
 
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-top: 1em;
 }
 
 .gallery-item {
-  width: 100%;
+  flex: 1 1 180px;
+  min-width: 180px;
+  position: relative;
 }
 
 .gallery-code,
@@ -149,6 +151,10 @@ pre code {
   border: 2px solid #f2f7fb;
   box-sizing: border-box;
   background: #222831;
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  overflow: auto;
 }
 
 .gallery-grid iframe {
@@ -160,6 +166,8 @@ pre code {
   box-sizing: border-box;
   border-radius: 4px;
   background: #222831;
+  width: 100%;
+  height: auto;
 }
 
 a:visited {
