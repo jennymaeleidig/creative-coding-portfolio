@@ -36,6 +36,10 @@ body {
   position: relative;
 }
 
+pre code {
+  text-shadow: none !important;
+}
+
 .cloud-background {
   position: fixed;
   bottom: 0;
@@ -119,17 +123,43 @@ body {
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 16px;
+  gap: 8px;
   margin-top: 1em;
+}
+
+.gallery-item {
+  width: 100%;
+}
+
+.gallery-code,
+.gallery-sketch,
+.gallery-image {
+  width: 100%;
+  max-width: 100%;
 }
 
 .gallery-grid img,
 .gallery-grid iframe {
   width: 100%;
+  border: 2px solid #f2f7fb;
+  box-sizing: border-box;
+}
+
+.gallery-code {
+  border: 2px solid #f2f7fb;
+  box-sizing: border-box;
+  background: #222831;
 }
 
 .gallery-grid iframe {
   aspect-ratio: 16/9;
+}
+
+.gallery-sketch canvas {
+  border: 2px solid #f2f7fb;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: #222831;
 }
 
 a:visited {
