@@ -18,6 +18,8 @@ jobs:
     steps:
       # The checkout step copies your repo into the action runner. Important!
       - uses: actions/checkout@v4
+        with:
+          submodules: true
       # Here we deploy the folder
       - name: Deploy to neocities
         uses: bcomnes/deploy-to-neocities@v3
@@ -27,4 +29,3 @@ jobs:
           neocities_supporter: false # set this to true if you have a supporter account and want to bypass unsuported files filter.
           preview_before_deploy: true # print a deployment plan prior to waiting for files to upload.
           dist_dir: public
-          submodules: "true"
