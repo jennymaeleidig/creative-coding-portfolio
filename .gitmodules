@@ -1,0 +1,3 @@
+[submodule "public/projects/1-2/project-1-2"]
+	path = public/projects/1-2/project-1-2
+	url = git@github.com:jennymaeleidig/creative-coding-project-1-2.git
