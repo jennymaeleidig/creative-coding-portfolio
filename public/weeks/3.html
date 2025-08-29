@@ -7,11 +7,10 @@
     <link href="../style.css" rel="stylesheet" type="text/css" media="all" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/mono-blue.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/mono-blue.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/processing.min.js"></script>
-    <script type="text/javascript" src="../processing.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/processing.min.js"></script>
   </head>
   <body>
     <h1>Welcome to My Portfolio for the AT-5813-997 Course</h1>
@@ -30,7 +29,7 @@
     </nav>
     <hr />
     <h3>Week 3 - Variables</h3>
-       <div>
+    <div>
       <h4 id="project-variables">
         <a
           href="#project-variables"
@@ -62,7 +61,7 @@
         <div class="gallery-item gallery-code">
           <pre><code id="pde-code" class="language-processing" ></code></pre>
           <script>
-            fetch("../projects/3/project-3/sketch.pde")
+            fetch("../projects/3/project-3/sketch/sketch.pde")
               .then((response) => response.text())
               .then((code) => {
                 const codeBlock = document.getElementById("pde-code");
@@ -118,9 +117,7 @@
           </script>
         </div>
         <div class="gallery-item gallery-sketch">
-          <canvas
-            data-processing-sources="../projects/3/project-3/sketch.pde"
-          ></canvas>
+          <iframe src="https://editor.p5js.org/jennymaeleidig/full/R44C_b3UF"></iframe>
         </div>
     </div> 
     <img

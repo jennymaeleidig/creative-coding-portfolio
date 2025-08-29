@@ -7,10 +7,10 @@
     <link href="../style.css" rel="stylesheet" type="text/css" media="all" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/mono-blue.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/mono-blue.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/processing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/processing.min.js"></script>
     <script type="text/javascript" src="../processing.js"></script>
   </head>
   <body>
@@ -98,7 +98,7 @@
         <div class="gallery-item gallery-code">
           <pre><code id="pde-code" class="language-processing" ></code></pre>
           <script>
-            fetch("../projects/1-2/project-1-2/sketch.pde")
+            fetch("../projects/1-2/project-1-2/sketch/sketch.pde")
               .then((response) => response.text())
               .then((code) => {
                 const codeBlock = document.getElementById("pde-code");
@@ -155,7 +155,7 @@
         </div>
         <div class="gallery-item gallery-sketch">
           <canvas
-            data-processing-sources="../projects/1-2/project-1-2/sketch.pde"
+            data-processing-sources="../projects/1-2/project-1-2/sketch/sketch.pde"
           ></canvas>
         </div>
         <div class="gallery-item gallery-image">
