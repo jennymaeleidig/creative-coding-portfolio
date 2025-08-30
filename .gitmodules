@@ -7,3 +7,6 @@
 [submodule "public/projects/5/project-5"]
 	path = public/projects/5/project-5
 	url = git@github.com:jennymaeleidig/creative-coding-project-5.git
+[submodule "public/projects/6/project-6"]
+	path = public/projects/6/project-6
+	url = git@github.com:jennymaeleidig/creative-coding-project-6.git
