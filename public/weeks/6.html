@@ -47,6 +47,11 @@
       <p>
         See the code comments below for further detail.
       </p>
+      <p>
+        You will probably notice that the c64 orginal prints each line out progressively, shifting each line above it up.
+        I wasn't entirely sure how to replicate this given the double buffer implementation of processing, so I have it just fill the whole screen and then clear it.
+        Perhaps in the future it could be good to replicate the buffered effect of the c64 by way on an internal data structure to store each row / cell / column.
+      </p>
       <h5>Gallery</h5>
       <div class="gallery-grid">
         <div class="gallery-item gallery-code">
@@ -109,6 +114,9 @@
         </div>
         <div class="gallery-item gallery-sketch">
           <iframe src="https://editor.p5js.org/jennymaeleidig/full/k21-W_ge7"></iframe>
+        </div>
+        <div class="gallery-item gallery-sketch">
+          <iframe src="https://stigc.dk/c64/basic/?s=2MzRQCAjy9AtRcPYIUtEwMjDVM9UO8nPRMNTUtFawUnD3D_FXMDQAAA"></iframe>
         </div>
     </div>
     <img
