@@ -90,9 +90,7 @@
           >Link to GitHub</a
         >
       </p>
-      <p>
-        See the code comments below for further detail.
-      </p>
+      <p>See the code comments below for further detail.</p>
       <h5>Gallery</h5>
       <div class="gallery-grid">
         <div class="gallery-item gallery-code">
@@ -105,7 +103,7 @@
                 codeBlock.textContent = code;
                 hljs.highlightElement(codeBlock);
               });
-              
+
             // Highlight.js copy button plugin
             // https://farazpatankar.com/p/highlight-js-copy-button-plugin
             hljs.addPlugin({
@@ -118,13 +116,13 @@
                 if (wrapper == null) {
                   return;
                 }
-            
+
                 /**
                  * Make the parent relative so we can absolutely
                  * position the copy button
                  */
                 wrapper.classList.add("relative");
-            
+
                 const copyButton = document.createElement("button");
                 copyButton.classList.add(
                   "absolute",
@@ -138,15 +136,15 @@
                 copyButton.title = "copy code";
                 // Lucide copy icon
                 copyButton.innerHTML = `<svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>`;
-            
+
                 copyButton.onclick = () => {
                   navigator.clipboard.writeText(text);
-            
+
                   // Notify user that the content has been copied
                   // Using alert as a simple notification since there's no toast library
                   alert("Copied to clipboard");
                 };
-            
+
                 // Append the copy button to the wrapper
                 wrapper.appendChild(copyButton);
               },
@@ -170,6 +168,18 @@
             alt="Project collage"
           />
         </div>
+        <div class="gallery-item gallery-sketch">
+          <iframe
+            src="https://embed.tidal.com/tracks/22729115"
+            width="500"
+            height="120"
+            allow="encrypted-media; fullscreen; clipboard-write https://embed.tidal.com; web-share"
+            sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox"
+            style="color-scheme: light dark"
+            title="TIDAL Embed Player"
+          />
+        </div>
+      </div>
     </div>
     <img
       src="../images/cloud-2.png"
