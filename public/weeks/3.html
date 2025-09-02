@@ -44,17 +44,18 @@
           >Link to GitHub</a
         >
       </p>
+      <p>See the code comments below for further detail.</p>
+      <p>CONTENT WARNING: Flashing Lights</p>
       <p>
-        See the code comments below for further detail.
+        NOTE: The mouse location with the embedded processing canvas element is
+        a bit off center. It works as expected if you compile it locally.
       </p>
       <p>
-        CONTENT WARNING: Flashing Lights
-      </p>
-      <p>
-        NOTE: The mouse location with the embedded processing canvas element is a bit off center. It works as expected if you compile it locally.
-      </p>
-      <p>
-        In the future it could be interesting to look into how to project shadows onto the walls. For this current implementation I definitely had to utilize demos / mathway a good bit so that I could figure out the exactly formulas needed. Specifically challenge was bounding / clamping the shape to the floor which is trapezoidal.
+        In the future it could be interesting to look into how to project
+        shadows onto the walls. For this current implementation I definitely had
+        to utilize demos / mathway a good bit so that I could figure out the
+        exactly formulas needed. Specifically challenge was bounding / clamping
+        the shape to the floor which is trapezoidal.
       </p>
       <h5>Gallery</h5>
       <div class="gallery-grid">
@@ -68,7 +69,7 @@
                 codeBlock.textContent = code;
                 hljs.highlightElement(codeBlock);
               });
-              
+
             // Highlight.js copy button plugin
             // https://farazpatankar.com/p/highlight-js-copy-button-plugin
             hljs.addPlugin({
@@ -81,13 +82,13 @@
                 if (wrapper == null) {
                   return;
                 }
-            
+
                 /**
                  * Make the parent relative so we can absolutely
                  * position the copy button
                  */
                 wrapper.classList.add("relative");
-            
+
                 const copyButton = document.createElement("button");
                 copyButton.classList.add(
                   "absolute",
@@ -101,15 +102,15 @@
                 copyButton.title = "copy code";
                 // Lucide copy icon
                 copyButton.innerHTML = `<svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>`;
-            
+
                 copyButton.onclick = () => {
                   navigator.clipboard.writeText(text);
-            
+
                   // Notify user that the content has been copied
                   // Using alert as a simple notification since there's no toast library
                   alert("Copied to clipboard");
                 };
-            
+
                 // Append the copy button to the wrapper
                 wrapper.appendChild(copyButton);
               },
@@ -117,11 +118,34 @@
           </script>
         </div>
         <div class="gallery-item gallery-sketch">
-          <iframe src="https://editor.p5js.org/jennymaeleidig/full/R44C_b3UF"></iframe>
+          <iframe
+            src="https://editor.p5js.org/jennymaeleidig/full/R44C_b3UF"
+          ></iframe>
         </div>
         <div class="gallery-item gallery-sketch">
-          <iframe src="https://embed.tidal.com/tracks/22729107" width="500" height="120" allow="encrypted-media; fullscreen; clipboard-write https://embed.tidal.com; web-share" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox" style="color-scheme: light dark" title="TIDAL Embed Player" />
+          <div
+            style="
+              width: 100%;
+              max-width: 100vw;
+              aspect-ratio: 16/9;
+              float: none;
+              clear: both;
+              margin: 2px auto;
+            "
+          >
+            <embed
+              src="https://www.youtube.com/embed/uK4Tu22kFPI"
+              wmode="transparent"
+              type="video/mp4"
+              width="100%"
+              height="100%"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowfullscreen
+              title="Americans"
+            />
+          </div>
         </div>
+      </div>
     </div>
     <img
       src="../images/cloud-2.png"
