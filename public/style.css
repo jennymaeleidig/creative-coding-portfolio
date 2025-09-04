@@ -173,12 +173,10 @@ pre code {
   position: relative;
 }
 
-.gallery-code,
 .gallery-sketch,
 .gallery-image {
   width: 100%;
   max-width: 100%;
-  margin: 1rem 1rem 1rem 1rem;
 }
 
 .gallery-grid img {
@@ -198,10 +196,12 @@ pre code {
   border: 2px solid #f2f7fb;
   box-sizing: border-box;
   background: #222831;
-  width: 100%;
+  width: 98%;
   height: auto;
   max-height: 600px;
   overflow: auto;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 /* Copy button styles for code blocks */
