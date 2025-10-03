@@ -10,3 +10,9 @@
 [submodule "public/projects/6/project-6"]
 	path = public/projects/6/project-6
 	url = git@github.com:jennymaeleidig/creative-coding-project-6.git
+[submodule "public/projects/9/project-9"]
+	path = public/projects/9/project-9
+	url = git@github.com:jennymaeleidig/creative-coding-project-9.git
+[submodule "public/projects/10/project-10"]
+	path = public/projects/10/project-10
+	url = git@github.com:jennymaeleidig/creative-coding-project-10.git

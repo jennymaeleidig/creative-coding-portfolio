@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Week 10 - Lists and Arrays</title>
     <link href="../style.css" rel="stylesheet" type="text/css" media="all" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/mono-blue.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/processing.min.js"></script>
   </head>
   <body>
     <h1>Welcome to My Portfolio for the AT-5813-997 Course</h1>
@@ -23,7 +29,94 @@
     </nav>
     <hr />
     <h3>Week 10 - Lists and Arrays</h3>
-    <p>Placeholder for Week 10 content.</p>
+    <div>
+      <h4 id="project-lists-and-arrays">
+        <a
+          href="#project-lists-and-arrays"
+          style="text-decoration: none; color: inherit"
+        >
+          PROJECT: Lists and Arrays
+        </a>
+      </h4>
+      <h5>About</h5>
+      <p>
+        <a href="https://github.com/jennymaeleidig/creative-coding-project-10"
+          >Link to GitHub</a
+        >
+      </p>
+      <p>
+        I reccomend downloading the jar / forking the repo to try out the sound!
+
+        See the code comments below for further detail.
+      </p>
+      <h5>Code</h5>
+      <div class="gallery-code">
+          <pre><code id="pde-code" class="language-processing" ></code></pre>
+          <script>
+            fetch("../projects/10/project-10/sketch/sketch.pde")
+              .then((response) => response.text())
+              .then((code) => {
+                const codeBlock = document.getElementById("pde-code");
+                codeBlock.textContent = code;
+                hljs.highlightElement(codeBlock);
+              });
+              
+            // Highlight.js copy button plugin
+            // https://farazpatankar.com/p/highlight-js-copy-button-plugin
+            hljs.addPlugin({
+              "after:highlightElement": ({ el, text }) => {
+                /**
+                 * el is the <code> element that was highlighted
+                 * el.parentElement is the <pre> element
+                 */
+                const wrapper = el.parentElement;
+                if (wrapper == null) {
+                  return;
+                }
+            
+                /**
+                 * Make the parent relative so we can absolutely
+                 * position the copy button
+                 */
+                wrapper.classList.add("relative");
+            
+                const copyButton = document.createElement("button");
+                copyButton.classList.add(
+                  "absolute",
+                  "top-2",
+                  "right-2",
+                  "p-2",
+                  "text-gray-500",
+                  "hover:text-gray-700",
+                  "copy-button"
+                );
+                copyButton.title = "copy code";
+                // Lucide copy icon
+                copyButton.innerHTML = `<svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>`;
+            
+                copyButton.onclick = () => {
+                  navigator.clipboard.writeText(text);
+            
+                  // Notify user that the content has been copied
+                  // Using alert as a simple notification since there's no toast library
+                  alert("Copied to clipboard");
+                };
+            
+                // Append the copy button to the wrapper
+                wrapper.appendChild(copyButton);
+              },
+            });
+          </script>
+        </div>
+      <h5>Gallery</h5>
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-image">
+          <video controls width="100%">
+            <source src="../projects/10/demo.mov" type="video/quicktime" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+    </div>
     <img
       src="../images/cloud-2.png"
       class="cloud-background"
