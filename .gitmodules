@@ -16,3 +16,6 @@
 [submodule "public/projects/10/project-10"]
 	path = public/projects/10/project-10
 	url = git@github.com:jennymaeleidig/creative-coding-project-10.git
+[submodule "public/projects/final/final"]
+	path = public/projects/final/final
+	url = git@github.com:jennymaeleidig/creative-coding-final
